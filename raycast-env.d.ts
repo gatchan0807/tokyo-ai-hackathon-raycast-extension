@@ -17,6 +17,8 @@ declare namespace Preferences {
   export type Index = ExtensionPreferences & {}
   /** Preferences accessible in the `log-activity` command */
   export type LogActivity = ExtensionPreferences & {}
+  /** Preferences accessible in the `log-meal` command */
+  export type LogMeal = ExtensionPreferences & {}
 }
 
 declare namespace Arguments {
@@ -24,5 +26,7 @@ declare namespace Arguments {
   export type Index = {}
   /** Arguments passed to the `log-activity` command */
   export type LogActivity = {}
+  /** Arguments passed to the `log-meal` command */
+  export type LogMeal = {}
 }
 
