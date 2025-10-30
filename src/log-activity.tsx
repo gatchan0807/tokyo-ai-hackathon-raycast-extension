@@ -46,6 +46,7 @@ export default function LogActivityCommand() {
       <Form.TextArea
         id="activity"
         title="今日は何をしましたか？"
+        placeholder="AIに今日の活動内容を伝えましょう"
         defaultValue={`例：
 今日は朝10時に起きて、11時から公園でジョギングをし、
 12時から21時までWeb開発業務をしました。
