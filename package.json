@@ -16,6 +16,12 @@
       "title": "燃費ダッシュボード",
       "description": "今日の燃費を確認",
       "mode": "view"
+    },
+    {
+      "name": "log-activity",
+      "title": "活動を記録",
+      "description": "活動を記録して走行距離を稼ぐ",
+      "mode": "view"
     }
   ],
   "dependencies": {
