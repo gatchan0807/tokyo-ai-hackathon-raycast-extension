@@ -4,7 +4,7 @@ import { List } from "@raycast/api";
 import { useEffect, useState } from "react";
 import EfficiencyMeter from "./components/EfficiencyMeter";
 
-interface EfficiencyData {
+export interface EfficiencyData {
   efficiency: number;
   rank: string;
   emoji: string;
@@ -15,13 +15,13 @@ interface EfficiencyData {
   meals: Meal[];
 }
 
-interface Activity {
+export interface Activity {
   id: string;
   name: string;
   distance: number;
 }
 
-interface Meal {
+export interface Meal {
   id: string;
   name: string;
   fuel: number;
