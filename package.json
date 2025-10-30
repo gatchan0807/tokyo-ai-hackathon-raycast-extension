@@ -1,0 +1,51 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "health-calculator",
+  "title": "Health Calculator",
+  "description": "あなたの健康を燃費で可視化",
+  "icon": "command-icon.png",
+  "author": "yourname",
+  "categories": ["Productivity", "Developer Tools"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "燃費ダッシュボード",
+      "description": "今日の燃費を確認",
+      "mode": "view"
+    },
+    {
+      "name": "log-activity",
+      "title": "活動を記録",
+      "description": "活動を記録して走行距離を稼ぐ",
+      "mode": "view"
+    },
+    {
+      "name": "log-meal",
+      "title": "食事を記録",
+      "description": "食事を記録して給油する",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.83.0",
+    "@raycast/utils": "^1.17.0",
+    "react": "^18.3.1",
+    "react-d3-speedometer": "^2.2.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
