@@ -13,14 +13,20 @@
   "commands": [
     {
       "name": "index",
-      "title": "燃費ダッシュボード",
+      "title": "今日の燃費を確認 (Check Today's Efficiency)",
       "description": "今日の燃費を確認",
       "mode": "view"
     },
     {
       "name": "log-activity",
-      "title": "活動を記録",
-      "description": "活動を記録して走行距離を稼ぐ",
+      "title": "今日のドライブ（Today's journey）",
+      "description": "活動を記録して走行距離を記録する",
+      "mode": "view"
+    },
+    {
+      "name": "log-meal",
+      "title": "今日の給油 (Food Refueling)",
+      "description": "食事を記録して給油する",
       "mode": "view"
     }
   ],
