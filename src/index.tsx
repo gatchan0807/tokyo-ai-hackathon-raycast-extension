@@ -41,7 +41,7 @@ export default function Command() {
     const mockData: EfficiencyData = {
       efficiency: 12.5,
       rank: "Good",
-      emoji: "😊",
+      emoji: "👍",
       totalKm: 150,
       netKm: 120,
       fuelLiters: 10,
