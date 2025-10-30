@@ -5,36 +5,21 @@ import { useState } from "react";
 import { savActivity } from "./utils/storage";
 
 export default function LogActivityCommand() {
-  const [nameError, setNameError] = useState<string | undefined>();
-  const [distanceError, setDistanceError] = useState<string | undefined>();
+  const [activityError, setActivityError] = useState<string | undefined>();
   const { pop } = useNavigation();
 
-  async function handleSubmit(values: { name: string; distance: string }) {
+  async function handleSubmit(values: { activity: string }) {
     // バリデーション
-    if (!values.name.trim()) {
-      setNameError("活動名を入力してください");
+    if (!values.activity.trim()) {
+      setActivityError("活動名を入力してください");
       return;
     }
-    setNameError(undefined);
-
-    const distance = parseFloat(values.distance);
-    if (isNaN(distance) || distance <= 0) {
-      setDistanceError("走行距離は0より大きい数値で入力してください");
-      return;
-    }
-    setDistanceError(undefined);
-
     try {
-      await savActivity({
-        name: values.name,
-        distance: distance,
-        timestamp: Date.now(),
-      });
-
+      setActivityError(undefined);
       showToast({
         style: Toast.Style.Success,
         title: "記録完了",
-        message: `${values.name} (${distance} km) を記録しました`,
+        message: `${values.activity} を記録しました`,
       });
 
       pop();
@@ -58,19 +43,15 @@ export default function LogActivityCommand() {
         </ActionPanel>
       }
     >
-      <Form.TextField
-        id="name"
-        title="活動名"
-        placeholder="例：ジョギング、ウォーキング"
-        error={nameError}
-        onChange={() => setNameError(undefined)}
-      />
-      <Form.TextField
-        id="distance"
-        title="走行距離 (km)"
-        placeholder="例：5"
-        error={distanceError}
-        onChange={() => setDistanceError(undefined)}
+      <Form.TextArea
+        id="activity"
+        title="今日は何をしましたか？"
+        defaultValue={`例：
+今日は朝10時に起きて、11時から公園でジョギングをし、
+12時から21時までWeb開発業務をしました。
+その後、筋トレを30分行いました。`}
+        error={activityError}
+        onChange={() => setActivityError(undefined)}
       />
     </Form>
   );
