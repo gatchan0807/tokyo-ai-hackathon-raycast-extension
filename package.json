@@ -5,7 +5,10 @@
   "description": "あなたの健康を燃費で可視化",
   "icon": "command-icon.png",
   "author": "yourname",
-  "categories": ["Productivity", "Developer Tools"],
+  "categories": [
+    "Productivity",
+    "Developer Tools"
+  ],
   "license": "MIT",
   "commands": [
     {
@@ -13,25 +16,12 @@
       "title": "燃費ダッシュボード",
       "description": "今日の燃費を確認",
       "mode": "view"
-    },
-    {
-      "name": "log-activity",
-      "title": "活動を記録",
-      "description": "活動を記録して走行距離を稼ぐ",
-      "mode": "view"
-    },
-    {
-      "name": "log-meal",
-      "title": "食事を記録",
-      "description": "食事を記録して給油する",
-      "mode": "view"
     }
   ],
   "dependencies": {
     "@raycast/api": "^1.83.0",
     "@raycast/utils": "^1.17.0",
-    "react": "^18.3.1",
-    "react-d3-speedometer": "^2.2.1"
+    "react": "^18.3.1"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.11",

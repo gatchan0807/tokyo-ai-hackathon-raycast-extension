@@ -1,6 +1,6 @@
 // src/components/EfficiencyMeter.tsx
 
-import { Detail, ActionPanel, Action } from "@raycast/api";
+import { Detail } from "@raycast/api";
 
 interface Props {
   data: {
@@ -90,13 +90,4 @@ function getAdvice(efficiency: number): string {
   } else {
     return "💀 **運動不足かも！** まずは10分の散歩から始めてみましょう。\n\nデスクワークだけでは燃費は上がりません。積極的に体を動かしましょう！";
   }
-}
-
-function getNextRankInfo(efficiency: number): string {
-  if (efficiency >= 20) return "最高ランク達成！";
-  if (efficiency >= 15) return `あと${(20 - efficiency).toFixed(1)} km/L`;
-  if (efficiency >= 10) return `あと${(15 - efficiency).toFixed(1)} km/L`;
-  if (efficiency >= 7) return `あと${(10 - efficiency).toFixed(1)} km/L`;
-  if (efficiency >= 5) return `あと${(7 - efficiency).toFixed(1)} km/L`;
-  return `あと${(5 - efficiency).toFixed(1)} km/L`;
 }
