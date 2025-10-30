@@ -64,9 +64,9 @@ ${getAdvice(data.efficiency)}
 }
 
 function generateMeter(efficiency: number): string {
-  const maxValue = 25;
-  const filledLength = Math.round((efficiency / maxValue) * 20);
-  const emptyLength = 20 - filledLength;
+  const maxValue = 30;
+  const filledLength = Math.round((efficiency / maxValue) * 30);
+  const emptyLength = 30 - filledLength;
 
   const filled = "█".repeat(filledLength);
   const empty = "░".repeat(emptyLength);
